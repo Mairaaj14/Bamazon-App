@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Mairaaj14/Bamazon-App#readme",
   "dependencies": {
-    "axios": "^0.18.0"
+    "inquirer": "^6.2.1",
+    "mysql": "^2.16.0"
+    
   }
 }
