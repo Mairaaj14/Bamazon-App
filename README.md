@@ -14,6 +14,8 @@ npm install mysql
 ### Functionality
 When user clones Bamazon and installs all dependencies needed, navigate to the app through the terminal and run the following line. 
 
+![alt text](photos/Bamazon.gif)
+
 
 
 
