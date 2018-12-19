@@ -10,7 +10,7 @@ require("console.table");
 //Assign a local host and port number
 var connection = mysql.createConnection({
     host: "localhost",
-    port: 3502,
+    port: 3306,
     user: "root",
     password: "password",
     database: "inventory_DB"
@@ -51,7 +51,8 @@ function managerPrompt() {
                         addNewItem();
                         break;
                 };
-
+//Function to display the current inventory if manager takes this action.
+//This will display the stock of each item that's currently for sale.
                 function displayInventory() {
                     connection.query(
                         "SELECT * FROM items",
@@ -62,7 +63,8 @@ function managerPrompt() {
 
                         })
                 }
-                //Function that displays the low inventory items
+                //Function that will display the items that are low in inventory, manager is able to see if they're almost
+                //running out of stock for a certain item.
                 function viewLowInventory() {
                     connection.query("SELECT id, item, category, price, inventoryQuantity FROM items", function (err, res) {
 

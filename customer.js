@@ -10,7 +10,7 @@ require("console.table");
 //Assign a local host and port number
 var connection = mysql.createConnection({
     host: "localhost",
-    port: 3502,
+    port: 3306,
     user: "root",
     password: "password",
     database: "inventory_DB"
@@ -69,7 +69,7 @@ function displayInventory() {
 
                     for (var i = 0; i < res.length; i++) {
                         if (userChoice === res[i].item_id) {
-                            currentInventory = res[i].inventory_quantity;
+                            currentInventory = res[i].inventoryQuantity;
                             itemPrice = res[i].price;
                             itemName = res[i].item_name;
                         }
